@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "url-query-stripper"
+version = "1.0.0"
+description = "Return a URL without query parameters or fragment."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+url-query-stripper = "url_query_stripper:main"
+
+[tool.setuptools]
+py-modules = ["url_query_stripper"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
